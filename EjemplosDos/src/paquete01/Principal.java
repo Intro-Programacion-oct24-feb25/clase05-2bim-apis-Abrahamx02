@@ -23,6 +23,7 @@ public class Principal {
         String apellidoRetornado;
         String nombreEmpresa;
         String direccionEmpresa;
+        double mejorNota;
        
         double[] misNotas;
         double promedio;
@@ -34,6 +35,7 @@ public class Principal {
         promedio = DatoFinal.obtenerPromedio(misNotas);
         nombreEmpresa = DatoTrabajo.nombreUs();
         direccionEmpresa = DatoTrabajo.directionUs();
+        mejorNota = DatoFinal.obtenerMejorNota(misNotas);
         
         
         System.out.printf("Los datos ingresados son:\n"
@@ -41,13 +43,15 @@ public class Principal {
                 + "Apellido: %s\n"
                 + "Ciudad: %s\n"
                 + "empresa :%s - Direccion : %s \n"
-                + "Promedio: %.2f\n",
+                + "Promedio: %.2f\n"
+                + "con la mejor nota:%.2f \n",
                 nombre,
                 apellidoRetornado,
                 ciudad,
                 nombreEmpresa,
                 direccionEmpresa,
-                promedio);
+                 promedio,
+                 mejorNota);
     }
     
 }
