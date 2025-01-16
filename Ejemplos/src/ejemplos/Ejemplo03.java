@@ -12,7 +12,7 @@ import java.security.SecureRandom;
  *
  * @author reroes
  */
-public class Ejemplo01 {
+public class Ejemplo03 {
     
     public static void main(String[] args) {
         // TODO code application logic here

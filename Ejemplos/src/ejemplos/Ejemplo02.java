@@ -13,30 +13,48 @@ import java.security.SecureRandom;
  * @author reroes
  */
 public class Ejemplo02 {
-    
+
     public static void main(String[] args) {
         // TODO code application logic here
-        int valorA = obtenerNumero(); // 3
-        int valorB = obtenerNumero(); // 2
-        int suma = obtnerSuma(valorA, valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n", 
-                valorA,
-                valorB,
-                suma);
+        int numeroElementos = 20;
+        int limite = 100;
+        int[] valores = obtenerValores(numeroElementos, limite);
+        presentarDatos(valores);
     }
     
-    public static int obtenerNumero() {
+
+    public static int[] obtenerValores(int a, int b) {
+        int[] Valores = new int[a];
+        for (int i = 0; i < Valores.length; i++) {
+            Valores[i] = obtenerNumero(b);
+        }
+        return Valores;
+    }
+    
+    
+
+    public static void presentarDatos(int[] v) {
+        for (int i = 0; i < v.length; i++) {
+            System.out.printf("%d\n", v[i]);
+        }
+    }
+    
+    
+
+    public static int obtenerNumero(int miLimite) {
         // objeto generador de números aleatorios
         SecureRandom numerosAleatorios = new SecureRandom();
-        
+
         // Returns a pseudorandom, uniformly distributed int value 
         // between 0 (inclusive) and the specified value (exclusive)
-        int valorAleatorio = numerosAleatorios.nextInt(5);
+        int valorAleatorio = numerosAleatorios.nextInt(miLimite);
         return valorAleatorio;
     }
     
-    public static int obtnerSuma(int a, int b){
+    
+
+    public static int obtenerSuma(int a, int b) {
         return a + b;
     }
-    
+
 }
