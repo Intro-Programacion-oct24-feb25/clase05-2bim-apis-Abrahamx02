@@ -21,7 +21,6 @@ public class Ejemplo02 {
         int[] valores = obtenerValores(numeroElementos, limite);
         presentarDatos(valores);
     }
-    
 
     public static int[] obtenerValores(int a, int b) {
         int[] Valores = new int[a];
@@ -30,16 +29,12 @@ public class Ejemplo02 {
         }
         return Valores;
     }
-    
-    
 
     public static void presentarDatos(int[] v) {
         for (int i = 0; i < v.length; i++) {
             System.out.printf("%d\n", v[i]);
         }
     }
-    
-    
 
     public static int obtenerNumero(int miLimite) {
         // objeto generador de números aleatorios
@@ -50,8 +45,6 @@ public class Ejemplo02 {
         int valorAleatorio = numerosAleatorios.nextInt(miLimite);
         return valorAleatorio;
     }
-    
-    
 
     public static int obtenerSuma(int a, int b) {
         return a + b;
